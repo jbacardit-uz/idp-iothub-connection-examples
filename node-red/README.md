@@ -30,5 +30,22 @@ Copy and paste the [following](https://github.com/JoBaAl/idp-iothub-connection-e
 
 The first part of the configuration is the user authentication. Double click on the node ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-credentials.png) and insert your username, password and client id.
 
-The credential will be inserted on the global variables on node-red start. Yo can insert it manually by triggering ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-on-start.png)
+The credential will be inserted on the global variables on node-red start. Yo can insert it manually by triggering ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-on-start.png).
+
+## Get user token
+
+Once you have inserted your credentials, you must authenticate and get your token. The *user authentication* example makes the following request with the credentials provided:
+
+```zsh
+curl -X 'POST' \
+  'https://dtwinplatformconnectiot.azurewebsites.net/login' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "bacardit.josep@gmail.com",
+  "password": "#jhub_2021$IoT"
+}'
+```
+
+
 
