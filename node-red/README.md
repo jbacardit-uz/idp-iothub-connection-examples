@@ -46,12 +46,27 @@ curl -X 'POST' \
   -H 'accept: */*' \
   -H 'Content-Type: application/json' \
   -d '{
-  "email": "your-email",
-  "password": "your-password"
+  "email": "${your-email}",
+  "password": "${your-password}"
 }'
 ```
 
 This example stores the response token in the global variables as you can see in the *Set token* node. To test it trigger the *inject* node.
+
+## Get user token
+
+![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/device-info.png).
+
+To get the information to connect to each one of your devices you need to make the following request
+
+```zsh
+curl -X 'GET' \
+  'https://dtwinplatformconnectiot.azurewebsites.net/api/v1/devices?clientid=${your-clientID}' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer ${your-token}'
+```
+
+The provided example makes this request in node-red for you and stores the result in the global variables. To test it trigger the *inject* node.
 
 
 
