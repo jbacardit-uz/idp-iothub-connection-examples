@@ -98,7 +98,9 @@ return msg;
 
 ## Receive data
 
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/send-data.png).
+![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/receive-data.png).
+
+You just need to set the *connectionString* on the *receiver* node to receive data from the iot hub. 
 
 
 
