@@ -18,3 +18,11 @@ Once the installation is finished type *iot* on the top left corner and you will
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/iothub-nodes.png)
 
+## Import example configutation
+
+Go to the node-red menu on the top right corner and click on *Import*
+
+![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/import-node-red-configuration.png)
+
+Copy and paste the [following](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/node-red/example.json) json and click on *import*.
+
