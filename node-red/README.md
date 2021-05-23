@@ -47,5 +47,7 @@ curl -X 'POST' \
 }'
 ```
 
+This example stores the response token in the global variables as you can see in the *Set token* node. To test it trigger the *inject* node.
+
 
 
