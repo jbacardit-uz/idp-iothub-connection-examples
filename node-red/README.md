@@ -34,7 +34,7 @@ The credential will be inserted on the global variables on node-red start. You c
 
 ## Get user token
 
-Once you have inserted your credentials, you must authenticate and get your token. The *user authentication* example makes the following request with the credentials provided:
+Once you have inserted your credentials, you must authenticate and get your token. The *user authentication* example makes the following request with the provided credentials:
 
 ```zsh
 curl -X 'POST' \
