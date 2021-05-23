@@ -1,9 +1,8 @@
-# idp-iothub-connection-examples
+# idp iothub node-red connection example
 
-This repository contains examples of how to connect to the idp-iot-hub platform. 
+This example show how to connect to the idp iot using node res. 
 
-Follow these instructions for this technologies:
+##Install iothub node-red nodes
 
-* [node.js](http://www.dropwizard.io/1.0.2/docs/).
-* [node-red](http://www.dropwizard.io/1.0.2/docs/).
+![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/img-manage-palette.pngg)
 
