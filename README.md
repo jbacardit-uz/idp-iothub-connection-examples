@@ -1,4 +1,4 @@
-# idp-iothub-connection-examples
+# idp iothub connection examples
 
 This repository contains examples of how to connect to the idp-iot-hub platform. 
 
