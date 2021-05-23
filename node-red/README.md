@@ -28,9 +28,9 @@ Copy and paste the [following](https://github.com/JoBaAl/idp-iothub-connection-e
 
 ## User authentication
 
-The first part of the configuration is the user authentication. Double click on the node ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-credentials.png) and insert your username, password and client id.
+The first part of the configuration is *user authentication*. Double click on the node ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-credentials.png) and insert your username, password and client id.
 
-The credential will be inserted on the global variables on node-red start. Yo can insert it manually by triggering ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-on-start.png).
+The credential will be inserted on the global variables on node-red start. You can insert it manually by triggering ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/node-on-start.png).
 
 ## Get user token
 
