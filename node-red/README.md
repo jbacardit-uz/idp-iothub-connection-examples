@@ -73,7 +73,7 @@ The provided example makes this request in node-red for you and stores the resul
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/send-data.png).
 
-In this example, you can see how to send data to the iot hub as is shown in the function node with the following javascript lines.
+In this example, you can see how to send data to the iot hub as is shown in the function node with the following javascript lines. Set the *Hostname: idpiot-iothub.azure-devices.net* in the *Azure IoT Hub* node 
 
 ```js
 const devicesToken = global.get('devicesToken');
