@@ -24,5 +24,5 @@ Go to the node-red menu on the top right corner and click on *Import*
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/import-node-red-configuration.png)
 
-Copy and paste the [following](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/node-red/example.json) json.
+Copy and paste the [following](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/node-red/example.json) json and click on *import*.
 
