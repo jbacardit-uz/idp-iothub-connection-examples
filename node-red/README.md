@@ -57,7 +57,7 @@ This example stores the response token in the global variables as you can see in
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/device-info.png).
 
-To get the the information to connect to each one of your devices you need to make the following request
+To get the information to connect to each one of your devices you need to make the following request
 
 ```zsh
 curl -X 'GET' \
@@ -66,7 +66,7 @@ curl -X 'GET' \
   -H 'Authorization: Bearer ${your-token}'
 ```
 
-The provided example makes this request in node-red for you. To test it trigger the *inject* node.
+The provided example makes this request in node-red for you and stores the result in the global variables. To test it trigger the *inject* node.
 
 
 
