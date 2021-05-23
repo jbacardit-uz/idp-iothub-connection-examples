@@ -4,6 +4,6 @@ This repository contains examples of how to connect to the idp-iot-hub platform.
 
 Follow these instructions for this technologies:
 
-* [node.js](http://www.dropwizard.io/1.0.2/docs/).
-* [node-red](http://www.dropwizard.io/1.0.2/docs/).
+* [node.js](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/nodejs).
+* [node-red](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/node-red).
 
