@@ -77,7 +77,7 @@ In this example you can see how to send data to the iot hub as is shown in the f
 
 ```js
 const devicesToken = global.get('devicesToken');
-deviceId = '11TEM01_00';
+const deviceId = '11TEM01_00';
 
 const data = {
     timestamp: new Date(),
