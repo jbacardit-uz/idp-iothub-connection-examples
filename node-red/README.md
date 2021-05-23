@@ -42,8 +42,8 @@ curl -X 'POST' \
   -H 'accept: */*' \
   -H 'Content-Type: application/json' \
   -d '{
-  "email": "bacardit.josep@gmail.com",
-  "password": "#jhub_2021$IoT"
+  "email": "your-email",
+  "password": "your-password"
 }'
 ```
 
