@@ -69,4 +69,32 @@ curl -X 'GET' \
 The provided example makes this request in node-red for you and stores the result in the global variables. To test it trigger the *inject* node.
 
 
+## Send data
+
+![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/send-data.png).
+
+In this example you can see how to send data to the iot hub as is shown in the function node with the following javascript lines.
+
+```js
+const devicesToken = global.get('devicesToken');
+deviceId = '11TEM01_00';
+
+const data = {
+    timestamp: new Date(),
+    deviceId,
+    value: 24.5
+}
+
+msg.payload.timestamp = new Date();
+msg.payload = {
+    deviceId,
+    'key': devicesToken[deviceId],
+    'protocol':'mqtt',
+    data
+}
+
+return msg;
+```
+
+
 
