@@ -68,9 +68,7 @@ This example returns a json object as follows:
 }
 ```
 
-## Get user token
-
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/device-info.png).
+## Get devices info
 
 To get the information to connect to each one of your devices you need to make the following request
 
@@ -81,9 +79,54 @@ curl -X 'GET' \
   -H 'Authorization: Bearer ${your-token}'
 ```
 
-The provided example makes this request in node-red for you and stores the result in the global variables. To test it trigger the *inject* node.
+The */interface/get-device-info.js* makes this request in nodejs for you:
 
+```js
+module.exports = async (clientid, token) => {
+    const result = { data: null, error: null };
+    const headers = { Authorization: `Bearer ${token}` };
+    try {
+        const response = await axios.get(`https://dtwinplatformconnectiot.azurewebsites.net/api/v1/devices?clientid=${clientid}`, { headers })
+        const { data } = response;
+        result.data = data;
+    } catch (error) {
+        result.error = error;
+    }
+    return result 
+};
+```
 
+This example returns a json object as follows:
+
+```json
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "device name",
+      "tag": "deviceId",
+      "code": null,
+      "bimId": null,
+      "sourceHub": "source-hub.url.net",
+      "sourceHubKey": "device-key",
+      "token": "device-token",
+      "registeredDate": "2021-05-06T13:45:50.817867"
+    },
+    {
+      "id": 2,
+      "name": "device name",
+      "tag": "deviceId",
+      "code": null,
+      "bimId": null,
+      "sourceHub": "source-hub.url.net",
+      "sourceHubKey": "device-key",
+      "token": "device-token",
+      "registeredDate": "2021-05-06T13:56:55.623866"
+    }
+  ],
+  "error": null
+}
+```
 ## Send data
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/send-data.png).
