@@ -10,6 +10,35 @@ Go to the *nodejs* and run the folowing command to install the packages.
 npm install
 ```
 
+For the MQTT client connection we are setting the following properties:
+
+```js
+const options = {
+  keepalive: 10,
+  clientId: deviceId,
+  protocolId: 'MQTT',
+  clean: false,
+  protocolVersion: 4,
+  reconnectPeriod: 20000,
+  connectTimeout: 30 * 1000,
+  username: deviceUserName,
+  rejectUnauthorized: false,
+};
+```
+
+Each device connection has his own token. Once we have the token, we must update the client connection options before initialize the connection.
+
+```js
+options.password = data[deviceId];
+const client = mqtt.connect('mqtts://idpiot-iothub.azure-devices.net:8883', options)
+```
+
+the user name for the MQTT conncetion is always as follows:
+
+```
+idpiot-iothub.azure-devices.net/${deviceId}/api-version=2018-06-30
+```
+
 ## Set credentials
 
 Rename the *.envsample* to *.env*.
@@ -131,30 +160,9 @@ This example returns a json object as follows:
 ```
 ## Send data
 
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/send-data.png).
 
-In this example, you can see how to send data to the iot hub as is shown in the function node with the following javascript lines. Set the *Hostname: idpiot-iothub.azure-devices.net* in the *Azure IoT Hub* node 
 
-```js
-const devicesToken = global.get('devicesToken');
-const deviceId = '11TEM01_00';
 
-const data = {
-    timestamp: new Date(),
-    deviceId,
-    value: 24.5
-}
-
-msg.payload.timestamp = new Date();
-msg.payload = {
-    deviceId,
-    'key': devicesToken[deviceId],
-    'protocol':'mqtt',
-    data
-}
-
-return msg;
-```
 
 ## Receive data
 
