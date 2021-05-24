@@ -2,6 +2,12 @@
 
 This example shows how to connect to the idp iot using nodejs. 
 
+Run the folowing command to install the packages.
+
+```zsh
+npm install
+```
+
 ## Set credentials
 
 Rename the *.envsample* to *.env*.
@@ -19,17 +25,9 @@ CLIENTID=
 DEVICEID=
 ```
 
-Run the folowing command to install the packages.
-
-```zsh
-npm install
-```
-
 ## Get user token
 
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/user-authentication.png).
-
-Once you have inserted your credentials, you must authenticate and get your token. The *user authentication* example makes the following request with the provided credentials:
+First, you must authenticate and get your user token. The */interface/get-user-token.js* example emulates the following request with the provided credentials:
 
 ```zsh
 curl -X 'POST' \
@@ -42,7 +40,33 @@ curl -X 'POST' \
 }'
 ```
 
-This example stores the response token in the global variables as you can see in the *Set token* node. To test it trigger the *inject* node.
+```js
+module.exports = async (email, password) => {
+    const result = { data: null, error: null };
+  try {
+    const response = await axios.post(`https://dtwinplatformconnectiot.azurewebsites.net/login`, {
+        email,
+        password
+    })
+    const { data } = response;
+    result.data = data;
+  } catch (error) {
+    result.error = error;
+  }
+  return result 
+};
+```
+
+This example returns a json object as follows:
+
+```json
+{
+  data: {
+    token: 'your-token'
+  },
+  error: null
+}
+```
 
 ## Get user token
 
