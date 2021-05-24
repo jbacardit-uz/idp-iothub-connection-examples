@@ -1,5 +1,8 @@
 # Credential
 USER_NAME=
 PASSWORD=
+
+#Your client id and the device id
+#that you want to connect.
 CLIENTID=
 DEVICEID=
