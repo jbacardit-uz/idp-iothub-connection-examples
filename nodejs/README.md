@@ -158,17 +158,27 @@ This example returns a json object as follows:
   "error": null
 }
 ```
+
 ## Send data
 
+To sent data to the iot hub we will sent the data to the following topic. The topic is always the same, you just need to change the device id.
 
-
-
+```js
+const topicPublish = `devices/${deviceId}/messages/events/`;
+client.publish(topicPublish, 'Current time is: ' + new Date());
+```
 
 ## Receive data
 
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/receive-data.png).
+To receive data from the iot hub we will recive the data to the following topic. The topic is always the same, you just need to change the device id.
 
-You just need to set the *connectionString* on the *receiver* node to receive data from the iot hub. 
+```js
+const topicReceive = `devices/${deviceId}/messages/devicebound/#`
+client.subscribe(topicReceive)
+client.on('message', function (topic, message) {
+  console.log('MESSAGE: ', message)
+});
+```
 
 
 
