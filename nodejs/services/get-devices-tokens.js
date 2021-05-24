@@ -1,5 +1,5 @@
 const getToken = require('../interface/get-user-token');
-const deviceInfo = require('../interface/device-info');
+const getDeviceInfo = require('../interface/get-device-info');
 
 const devicesToken = {};
 
@@ -13,7 +13,7 @@ module.exports = async (email, password, clientid) => {
         }
         const { token } = getTokenData;
         
-        const { data: deviceInfoData, error: deviceInfoError } = await deviceInfo(clientid, token);
+        const { data: deviceInfoData, error: deviceInfoError } = await getDeviceInfo(clientid, token);
         if (deviceInfoError) {
             throw new Error( `ERROR device info ${deviceInfoError}`);
         }

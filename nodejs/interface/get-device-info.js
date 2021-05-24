@@ -10,5 +10,6 @@ module.exports = async (clientid, token) => {
     } catch (error) {
         result.error = error;
     }
+    console.log(result);
     return result 
 };
