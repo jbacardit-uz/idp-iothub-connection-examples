@@ -1,0 +1,13 @@
+{
+  "name": "idp-iothub-connection-examples-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mqtt-connection.js",
+  "dependencies": {
+    "@azure/event-hubs": "^5.5.1",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "mqtt": "^4.2.6"
+  },
+  "license": "ISC"
+}
