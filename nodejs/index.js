@@ -1,6 +1,6 @@
 require("dotenv").config();
 const mqtt = require('mqtt')
-const getDevicesTokens = require('./get-devices-tokens');
+const getDevicesTokens = require('./services/get-devices-tokens');
 
 const email = process.env["USER_NAME"] || "";
 const password = process.env["PASSWORD"] || "";
@@ -25,6 +25,11 @@ const options = {
 
 (async () => {
     const { data, error } = await getDevicesTokens(email, password, clientId);
+    if (error) {
+      console.log('ERROR: ', error);
+      return;
+    }
+      
     console.log('DEVICES TOKENS: ', data);
 
     options.password = data[deviceId];
