@@ -33,7 +33,7 @@ options.password = data[deviceId];
 const client = mqtt.connect('mqtts://idpiot-iothub.azure-devices.net:8883', options)
 ```
 
-the user name for the MQTT conncetion is always as follows:
+The user name for the MQTT conncetion is always as follows:
 
 ```
 idpiot-iothub.azure-devices.net/${deviceId}/api-version=2018-06-30
