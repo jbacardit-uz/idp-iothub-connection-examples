@@ -2,7 +2,28 @@
 
 This example shows how to connect to the idp iot using nodejs. 
 
-## User authentication
+## Set credentias
+
+Rename the *.envsample* to *.env*.
+
+Change the environment variables with your username, password, client id and device id.
+
+```
+# Credential
+USER_NAME=
+PASSWORD=
+
+#Your client id and the device id
+#that you want to connect.
+CLIENTID=
+DEVICEID=
+```
+
+Run the folowing command to install the packages.
+
+```zsh
+npm install
+```
 
 ![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/set-credentials.png)
 
