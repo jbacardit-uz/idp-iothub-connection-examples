@@ -4,7 +4,7 @@ This example shows how to connect to the idp iot using nodejs.
 
 For the MQTT connections. The example uses the [following](https://github.com/mqttjs/MQTT.js#readme) package.
 
-Go to the *nodejs* and run the folowing command to install the packages.
+Go to the *nodejs* folder and run the folowing command to install the packages.
 
 ```zsh
 npm install
