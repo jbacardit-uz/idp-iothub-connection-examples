@@ -2,7 +2,7 @@
 
 This example shows how to connect to the idp iot using nodejs. 
 
-## Set credentias
+## Set credentials
 
 Rename the *.envsample* to *.env*.
 
@@ -24,12 +24,6 @@ Run the folowing command to install the packages.
 ```zsh
 npm install
 ```
-
-![alt text](https://github.com/JoBaAl/idp-iothub-connection-examples/blob/main/img/set-credentials.png)
-
-The first part of the configuration is *user authentication*. Double click on the node *Set you credentials and client ID* and insert your username, password and client id.
-
-The credential will be inserted on the global variables on node-red start. You can insert it manually by triggering *on Start*.
 
 ## Get user token
 
