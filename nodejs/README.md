@@ -61,10 +61,10 @@ This example returns a json object as follows:
 
 ```json
 {
-  data: {
-    token: 'your-token'
+  "data": {
+    "token": "your-token"
   },
-  error: null
+  "error": null
 }
 ```
 
