@@ -6,5 +6,5 @@ Follow these instructions for this technologies:
 
 * [node.js mqtt connection](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/nodejs/mqtt).
 * [node-red](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/node-red).
-* [node.js event hub connection](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/eventhub).
+* [node.js event hub connection](https://github.com/JoBaAl/idp-iothub-connection-examples/tree/main/nodejs/eventhub).
 
