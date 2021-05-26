@@ -14,8 +14,7 @@ These sample programs show how to use the JavaScript client libraries for Azure 
 
 | **File Name**                                                             | **Description**                                                                                                                                                                         |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [receiveEvents.js][receiveevents]                                         | demonstrates how to use the EventHubConsumerClient to process events from all partitions of a consumer group in an Event Hubs instance.                                                 |
-| [generateToken.js][generatetoken]                                         | demonstrates how to use the token generation without azure sdk                                                                                                                          |
+| [index.js][receiveevents]                                         | demonstrates how to use the EventHubConsumerClient to process events from all partitions of a consumer group in an Event Hubs instance.                                                 |
 
 **Note**: `EventHubConsumerClient` supports checkpointing using the `@azure/eventhubs-checkpointstore-blob` and `@azure/storage-blob` packages. For an example that demonstrates how to use this functionality, see the [receiveEventsUsingCheckpointStore][checkpointing] sample in the `@azure/eventhubs-checkpointstore-blob` repository.
 
