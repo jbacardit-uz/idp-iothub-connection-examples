@@ -42,7 +42,7 @@ npm install
 3. Run whichever samples you like (note that some samples may require additional setup, see the table above):
 
 ```bash
-node receiveEvents.js
+node index.js
 ```
 
 ## Next Steps
