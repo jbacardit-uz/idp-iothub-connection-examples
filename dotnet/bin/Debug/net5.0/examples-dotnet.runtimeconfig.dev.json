@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/jbacardit/.dotnet/store/|arch|/|tfm|",
+      "/Users/jbacardit/.nuget/packages"
+    ]
+  }
+}
